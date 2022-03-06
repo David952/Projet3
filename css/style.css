@@ -1,0 +1,211 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.tailleTitreAnnonce {
+    font-size: 18px;
+}
+
+.annonce-icone > i {
+    font-size: 30px;
+}
+
+.fondGris {
+    background-color: #f6f6f6;
+}
+
+@media screen and (max-width: 667px) {
+    header{
+        margin-top: 5px;
+        box-shadow: 0 6px 6px #cfcfcf;
+    }
+
+    .logo {
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .logo img {
+        height: 30px;
+    }
+
+    .location {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        background-color: #eaeaea;
+        margin-top: 2px;
+    }
+
+    .loc-icone img {
+        height: 18px;
+    }
+
+    .loc-icone {
+        margin-right: 5px;
+    }
+
+    .loc-texte {
+        border: none;
+        width: 140px;
+        background-color: #eaeaea;
+    }
+
+    .reserver {
+        height: 325px;
+        text-align: center;
+        padding-top: 25px;
+    }
+
+    .reserver p {
+        margin-bottom: 30px;
+    }
+
+    .btn {
+        background: linear-gradient(#e771da, #a55cdb);
+        border: transparent;
+        padding: 20px;
+        border-radius: 35px;
+        color: white;
+    }
+
+    .fonctionnement {
+        position: relative;
+        margin: 50px 25px 65px 20px;
+    }
+    
+    .fonct-annonce {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 22px;
+        border-radius: 20px 20px 20px 20px;
+        box-shadow: 0px 10px 15px #e6e6e6;
+        margin: 0 0 25px 15px;
+    }
+
+    .fonct-num {
+        position: absolute;
+        left: 0px;
+        background-color: #9356dc;
+        color: white;
+        height: 30px;
+        width: 30px;
+        padding: 7px;
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    .fonct-image {
+        position: relative;
+        left: -25px;
+    }
+
+    .restaurants {
+        padding: 35px 15px 40px 15px;
+    }
+
+    .rest-annonce {
+        display: flex;
+        position: relative;
+        height: 260px;
+        margin-bottom: 15px;
+        border-radius: 20px;
+        box-shadow: 0px 1px 5px #e6e6e6;
+        background-color: white;
+        overflow: hidden;
+    }
+
+    .annonce-image {
+        position: absolute;
+        top: -55px;
+    }
+
+    .annonce-texte {
+        position: absolute;
+        background-color: white;
+        height: 80px;
+        width: 100%;
+        top: 180px;
+        padding-left: 10px;
+    }
+
+    .annonce-nouveau {
+        position: absolute;
+        background-color: #99e2d0;
+        color: #008766;
+        padding: 7px;
+        left: 250px;
+        top: 15px;
+    }
+
+    .annonce-icone {
+        position: absolute;
+        top: 195px;
+        left: 295px;
+    }
+
+    .icone:hover {
+        background: linear-gradient(#a55cdb, #e771da);
+    }
+
+    .annonce-image-2 {
+        position: absolute;
+        top: -155px;
+    }
+
+    .annonce-image-3 {
+        position: absolute;
+        top: -50px;
+    }
+
+    footer {
+        background-color: #353535;
+        padding: 35px 0 50px 20px;
+        line-height: 25px;
+    }
+
+    footer a {
+        color: white;
+    }
+
+    .footer-logo img{
+        height: 20px;
+        margin-bottom: 15px;
+    }
+
+    .footerInfo {
+        display: flex;
+    }
+
+    .infoIcone {
+        margin-right: 10px;
+    }
+
+    .infoIcone img {
+        height: 16px;
+    }
+
+}
