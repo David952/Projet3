@@ -33,6 +33,10 @@ img {
     background-color: #f6f6f6;
 }
 
+.fondViolet {
+    background-color: #f5edff;
+}
+
 @media screen and (max-width: 667px) {
     header{
         margin-top: 5px;
@@ -76,7 +80,7 @@ img {
     .reserver {
         height: 325px;
         text-align: center;
-        padding-top: 25px;
+        padding: 25px 45px 0 45px;
     }
 
     .reserver p {
@@ -89,6 +93,11 @@ img {
         padding: 20px;
         border-radius: 35px;
         color: white;
+    }
+
+    .btn:hover {
+        opacity: 0.7;
+        box-shadow: 1px 1px 15px black;
     }
 
     .fonctionnement {
@@ -121,6 +130,10 @@ img {
     .fonct-image {
         position: relative;
         left: -25px;
+    }
+
+    .fonct-image i {
+        font-size: 30px;
     }
 
     .restaurants {
@@ -167,6 +180,10 @@ img {
         left: 295px;
     }
 
+    .icone {
+        color: #9356DC;
+    }
+
     .icone:hover {
         background: linear-gradient(#a55cdb, #e771da);
     }
@@ -183,6 +200,7 @@ img {
 
     footer {
         background-color: #353535;
+        color: white;
         padding: 35px 0 50px 20px;
         line-height: 25px;
     }
@@ -204,8 +222,8 @@ img {
         margin-right: 10px;
     }
 
-    .infoIcone img {
-        height: 16px;
+    .infoIcone i {
+        font-size: 20px;
     }
 
 }
