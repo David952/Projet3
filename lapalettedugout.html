@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/menus.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap" rel="stylesheet">
     <title>Oh My Food</title>
 </head>
 
@@ -17,7 +17,6 @@
 
     <!-- LOGO -->
     <header>
-
         <div class="retour">
             <a href="index.html">
                 <i class="las la-arrow-left"></i>
@@ -35,144 +34,169 @@
         <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Une assiète sur une table">
     </section>
     
-    <main class="fondGris">
+    <main class="fond__gris">
         <!-- CONTENU DU MENU-->
-        <div class="contenuMenu fondGris">
-            <div class="titreCoeur">
+        <div class="contenu__menu fond__gris">
+            <div class="contenu__menu__titre-coeur">
                 <h1>La palette du goût</h1>
-                <i class="icone tailleIcone lar la-heart"></i>
+                <!-- <i class="icone lar la-heart"></i> -->
+                <img src="/images/icone/heart_icon.svg" alt="Un coeur">
             </div>
             <!-- ENTREES-->
             <section class="menu">
-                <h2 class="tailleTitreAnnonce">ENTRÉES</h2>
-                <div class="menuAnnonce">
-                    <div class="titreTextePrix">
-                        <h3>Fricassée d'escargot</h3><br />
-                        <div class="textePrix">
+                <h2 class="taille__titre">ENTRÉES</h2>
+                <div class="menu__annonce">
+                    <div class="menu__titre-texte-prix">
+                        <h3>Fricassée d'escargot</h3>
+                        <div class="menu__texte-prix">
                             <p>Au piment d'Espelette</p>
-                            <p>25€</p>
+                            <span class="prix">25€</span>
                         </div>
                     </div>
-                    <div class="checkAffichage">
-                        <i class="check lar la-check-circle"></i>
+                    <div class="affichage__valider">
+                        <i class="affichage__valider-icone lar la-check-circle"></i>
                     </div>
                 </div>
 
-                <div class="menuAnnonce">
-                    <div class="titreTextePrix">
-                        <h3>Foie gras de canard mi-cuit</h3><br />
-                        <div class="textePrix">
+                <div class="menu__annonce">
+                    <div class="menu__titre-texte-prix">
+                        <h3>Foie gras de canard mi-cuit</h3>
+                        <div class="menu__texte-prix">
                             <p>Et ses copeaux de truffe noire</p>
-                            <p>35€</p>
+                            <span class="prix">35€</span>
                         </div>
+                    </div>
+                    <div class="affichage__valider">
+                        <i class="affichage__valider-icone lar la-check-circle"></i>
                     </div>
                 </div>
 
-                <div class="menuAnnonce">
-                    <div class="titreTextePrix">
-                        <h3>Oeuf au plat</h3><br />
-                        <div class="textePrix">
+                <div class="menu__annonce">
+                    <div class="menu__titre-texte-prix">
+                        <h3>Oeuf au plat</h3>
+                        <div class="menu__texte-prix">
                             <p>Assaisonné à la truffe sur lit de caviar</p>
-                            <p>20€</p>
+                            <span class="prix">20€</span>
                         </div>
+                    </div>
+                    <div class="affichage__valider">
+                        <i class="affichage__valider-icone lar la-check-circle"></i>
                     </div>
                 </div>
             </section>
             <!-- PLATS -->
             <section class="menu">
-                <h2 class="tailleTitreAnnonce">PLATS</h2>
-                <div class="menuAnnonce">
-                    <div class="titreTextePrix">
-                        <h3>Filet de boeuf aux herbes</h3><br />
-                        <div class="textePrix">
+                <h2 class="taille__titre">PLATS</h2>
+                <div class="menu__annonce">
+                    <div class="menu__titre-texte-prix">
+                        <h3>Filet de boeuf aux herbes</h3>
+                        <div class="menu__texte-prix">
                             <p>Accompagné de sa ribambelle de légumes</p>
-                            <p>40€</p>
+                            <span class="prix">40€</span>
                         </div>
+                    </div>
+                    <div class="affichage__valider">
+                        <i class="affichage__valider-icone lar la-check-circle"></i>
                     </div>
                 </div>
 
-                <div class="menuAnnonce">
-                    <div class="titreTextePrix">
-                        <h3>Parmentier de queue de boeuf</h3><br />
-                        <div class="textePrix">
+                <div class="menu__annonce">
+                    <div class="menu__titre-texte-prix">
+                        <h3>Parmentier de queue de boeuf</h3>
+                        <div class="menu__texte-prix">
                             <p>À la truffe noire sur sa purée de panais</p>
-                            <p>35€</p>
+                            <span class="prix">35€</span>
                         </div>
+                    </div>
+                    <div class="affichage__valider">
+                        <i class="affichage__valider-icone lar la-check-circle"></i>
                     </div>
                 </div>
 
-                <div class="menuAnnonce">
-                    <div class="titreTextePrix">
-                        <h3>Filet de turbot</h3><br />
-                        <div class="textePrix">
+                <div class="menu__annonce">
+                    <div class="menu__titre-texte-prix">
+                        <h3>Filet de turbot</h3>
+                        <div class="menu__texte-prix">
                             <p>Aux agrumes</p>
-                            <p>44€</p>
+                            <span class="prix">44€</span>
                         </div>
+                    </div>
+                    <div class="affichage__valider">
+                        <i class="affichage__valider-icone lar la-check-circle"></i>
                     </div>
                 </div>
             </section>
             <!-- DESSERTS -->
             <section class="menu">
-                <h2 class="tailleTitreAnnonce">DESSERTS</h2>
-                <div class="menuAnnonce">
-                    <div class="titreTextePrix">
-                        <h3>Paris-Brest</h3><br />
-                        <div class="textePrix">
+                <h2 class="taille__titre">DESSERTS</h2>
+                <div class="menu__annonce">
+                    <div class="menu__titre-texte-prix">
+                        <h3>Paris-Brest</h3>
+                        <div class="menu__texte-prix">
                             <p>Revisité</p>
-                            <p>18€</p>
+                            <span class="prix">18€</span>
                         </div>
+                    </div>
+                    <div class="affichage__valider">
+                        <i class="affichage__valider-icone lar la-check-circle"></i>
                     </div>
                 </div>
 
-                <div class="menuAnnonce">
-                    <div class="titreTextePrix">
-                        <h3>Macaron au chocolat d'exception</h3><br />
-                        <div class="textePrix">
+                <div class="menu__annonce">
+                    <div class="menu__titre-texte-prix">
+                        <h3>Macaron au chocolat d'exception</h3>
+                        <div class="menu__texte-prix">
                             <p>Et glace à la vanille de Madagascar</p>
-                            <p>22€</p>
+                            <span class="prix">22€</span>
                         </div>
+                    </div>
+                    <div class="affichage__valider">
+                        <i class="affichage__valider-icone lar la-check-circle"></i>
                     </div>
                 </div>
 
-                <div class="menuAnnonce">
-                    <div class="titreTextePrix">
-                        <h3>Mousse au chocolat</h3><br />
-                        <div class="textePrix">
+                <div class="menu__annonce">
+                    <div class="menu__titre-texte-prix">
+                        <h3>Mousse au chocolat</h3>
+                        <div class="menu__texte-prix">
                             <p>Au piment d'Espelette et à la truffe noire</p>
-                            <p>23€</p>
+                            <span class="prix">23€</span>
                         </div>
+                    </div>
+                    <div class="affichage__valider">
+                        <i class="affichage__valider-icone lar la-check-circle"></i>
                     </div>
                 </div>
             </section>
 
-            <div class="btnCommander">
-                <button class="btn" type="submit">Commander</button>
+            <div class="menu__btn">
+                <button class="menu__btn__commander" type="submit">Commander</button>
             </div>
-    </div>
+        </div>
     </main>
 
     <!-- BAS DE PAGE -->
-    <footer>
+    <footer class="footer">
 
-        <div class="footer-logo">
+        <div class="footer__logo">
             <img src="images/logo/ohmyfood@2x.svg">
         </div>
 
-        <div class="footerInfo">
-            <div class="infoIcone">
+        <div class="footer__info">
+            <div class="footer__info-icone">
                 <i class="las la-utensils"></i>
             </div>
             <a href="">Proposer un restaurant</a>
         </div>
 
-        <div class="footerInfo">
-            <div class="infoIcone">
+        <div class="footer__info">
+            <div class="footer__info-icone">
                 <i class="las la-hands-helping"></i>
             </div>
             <a href="">Devenir partenaire</a>
         </div>
 
-        <div class="footerInfo-3">
+        <div class="footer__info-3">
             <a href="">Mentions légales</a><br/>
             <a href="mailto:test@test.com">Contact</a>
         </div>
