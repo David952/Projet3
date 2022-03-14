@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap" rel="stylesheet">
     <title>Oh My Food</title>
 </head>
 
@@ -27,18 +27,18 @@
 
         <!-- LOCALISATION -->
         <section class="location">
-            <div class="loc-icone">
+            <div class="locaction__icone">
                 <img src="https://img.icons8.com/material-rounded/24/000000/marker.png" />
             </div>
 
             <form>
-                <input class="loc-texte" type="search" placeholder="Paris, Belleville" />
+                <input class="location__texte" type="search" placeholder="Paris, Belleville" />
             </form>
         </section>
 
         <!-- RESERVER -->
-        <section class="reserver fondGris">
-            <h1>Réservez le menu qui vous convient</h1>
+        <section class="reserver fond__gris">
+            <h2 class="titre">Réservez le menu qui vous convient</h2>
             <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
 
             <button class="btn">Explorer nos restaurants</button>
@@ -46,11 +46,11 @@
 
         <!-- FONCTIONNEMENT -->
         <section class="fonctionnement">
-            <h1>Fonctionnement</h1>
+            <h2 class="titre">Fonctionnement</h2>
 
-            <div class="fonct-annonce fondGris">
-                <div class="fonct-num">1</div>
-                <div class="fonct-image">
+            <div class="fonctionnement__annonce fond__gris">
+                <div class="fonctionnement__numero">1</div>
+                <div class="fonctionnement__image">
                     <i class="las la-mobile"></i>
                 </div>
                 <div>
@@ -58,9 +58,9 @@
                 </div>
             </div>
 
-            <div class="fonct-annonce fondGris">
-                <div class="fonct-num">2</div>
-                <div class="fonct-image">
+            <div class="fonctionnement__annonce fond__gris">
+                <div class="fonctionnement__numero">2</div>
+                <div class="fonctionnement__image">
                     <i class="las la-list"></i>
                 </div>
                 <div>
@@ -68,10 +68,10 @@
                 </div>
             </div>
 
-            <div class="fonct-annonce fondViolet">
-                <div class="fonct-num">3</div>
-                <div class="fonct-image">
-                    <i class="icone las la-store"></i>
+            <div class="fonctionnement__annonce fond__gris">
+                <div class="fonctionnement__numero">3</div>
+                <div class="fonctionnement__image">
+                    <i class="las la-store"></i>
                 </div>
                 <div>
                     <a href="">Dégustez au restaurant</a>
@@ -80,64 +80,68 @@
         </section>
 
         <!-- RESTAURANTS -->
-        <section class="restaurants fondGris">
-            <h1>Restaurants</h1>
+        <section class="restaurants fond__gris">
+            <h2 class="titre">Restaurants</h2>
 
-            <a class="rest-annonce" href="lapalettedugout.html">
-                <div class="annonce-image">
+            <a class="restaurants__annonce" href="lapalettedugout.html">
+                <div class="restaurants__annonce-image">
                     <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Une assiète sur une table">
                 </div>
-                <div class="annonce-texte">
-                    <h2 class=tailleTitreAnnonce>La palette du goût</h2>
+                <div class="restaurants__annonce-texte">
+                    <h3>La palette du goût</h3>
                     <p>Ménilmontat</p>
                 </div>
-                <div class="annonce-icone">
-                    <i class="icone lar la-heart"></i>
+                <div class="restaurants__annonce-icone">
+                    <!-- <i class="icone lar la-heart"></i> -->
+                    <img class="icone__coeur" src="/images/icone/heart_icon.svg" alt="Un coeur">
                 </div>
-                <div class="annonce-nouveau">
+                <div class="restaurants__annonce-nouveau">
                     <p>Nouveau</p>
                 </div>
             </a>
 
-            <a class="rest-annonce" href="lanoteenchantee.html">
-                <div class="annonce-image-2">
+            <a class="restaurants__annonce" href="lanoteenchantee.html">
+                <div class="restaurants__annonce__image-2">
                     <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Une assiète sur une table">
                 </div>
-                <div class="annonce-texte">
-                    <h2 class=tailleTitreAnnonce>La note enchantée</h2>
+                <div class="restaurants__annonce-texte">
+                    <h3>La note enchantée</h3>
                     <p>Charonne</p>
                 </div>
-                <div class="annonce-icone">
-                    <i class="icone lar la-heart"></i>
+                <div class="restaurants__annonce-icone">
+                   <!-- <i class="icone lar la-heart"></i> -->
+                   <img class="icone__coeur" src="/images/icone/heart_icon.svg" alt="Un coeur">
                 </div>
-                <div class="annonce-nouveau">
+                <div class="restaurants__annonce-nouveau">
                     <p>Nouveau</p>
                 </div>
             </a>
 
-            <a class="rest-annonce" href="alafrançaise.html">
-                <div class="annonce-image-3">
+            <a class="restaurants__annonce" href="alafrancaise.html">
+                <div class="restaurants__annonce-image-3">
                     <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Une assiète sur une table">
                 </div>
-                <div class="annonce-texte">
-                    <h2 class=tailleTitreAnnonce>À la française</h2>
+                <div class="restaurants__annonce-texte">
+                    <h3>À la française</h3>
                     <p>Cité Rouge</p>
                 </div>
-                <div class="annonce-icone">
-                    <i class="icone lar la-heart"></i>
+                <div class="restaurants__annonce-icone">
+                    <!-- <i class="icone lar la-heart"></i> -->
+                   <img class="icone__coeur" src="/images/icone/heart_icon.svg" alt="Un coeur">
                 </div>
             </a>
 
-            <a class="rest-annonce" href="ledelicedessens.html">
-                <div class="annonce-image">
+            <a class="restaurants__annonce" href="ledelicedessens.html">
+                <div class="restaurants__annonce-image">
                     <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Un plat sur une table">
                 </div>
-                <div class="annonce-texte">
-                    <h2 class=tailleTitreAnnonce>Le délice des sens</h2>
+                <div class="restaurants__annonce-texte">
+                    <h3>Le délice des sens</h3>
                     <p>Folie-Méricourt</p>
                 </div>
-                <div class="annonce-icone">
-                    <i class="icone lar la-heart"></i>
+                <div class="restaurants__annonce-icone">
+                    <!-- <i class="icone lar la-heart"></i> -->
+                   <img class="icone__coeur" src="/images/icone/heart_icon.svg" alt="Un coeur">
                 </div>
             </a>
         </section>
@@ -145,27 +149,27 @@
     </main>
 
     <!-- BAS DE PAGE -->
-    <footer>
+    <footer class="footer">
 
-        <div class="footer-logo">
+        <div class="footer__logo">
             <img src="images/logo/ohmyfood@2x.svg">
         </div>
 
-        <div class="footerInfo">
-            <div class="infoIcone">
+        <div class="footer__info">
+            <div class="footer__info-icone">
                 <i class="las la-utensils"></i>
             </div>
             <a href="">Proposer un restaurant</a>
         </div>
 
-        <div class="footerInfo">
-            <div class="infoIcone">
+        <div class="footer__info">
+            <div class="footer__info-icone">
                 <i class="las la-hands-helping"></i>
             </div>
             <a href="">Devenir partenaire</a>
         </div>
 
-        <div class="footerInfo-3">
+        <div class="footer__info-3">
             <a href="">Mentions légales</a><br/>
             <a href="mailto:test@test.com">Contact</a>
         </div>
