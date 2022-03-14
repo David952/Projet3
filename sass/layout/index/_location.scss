@@ -1,0 +1,19 @@
+@media screen and (max-width: $mobile){
+    .location {
+        @include flex_centrer;
+        height: 50px;
+        background-color: #eaeaea;
+        margin-top: 2px;
+        &-icone img {
+            height: 18px;
+        }
+        &__icone {
+            margin-right: 5px;
+        }
+        &__texte {
+            border: none;
+            width: 140px;
+            background-color: #eaeaea;
+        }
+    }
+}

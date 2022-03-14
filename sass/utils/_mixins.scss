@@ -1,0 +1,55 @@
+@mixin flex_centrer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex_espace_centrer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex_colonne {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex_espace {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin bord_arrondi {
+    border-radius: 20px;
+}
+
+@mixin position_absolute {
+    position: absolute;
+}
+
+@mixin contenu__menu {
+    position: relative;
+    border-radius: 40px 40px 0 0;
+    top: -50px;
+    padding: 0 10px 0 10px;
+}
+
+@mixin texte_pointille {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 300px;
+}
+
+@mixin btn {
+    background: linear-gradient(#e771da, #a55cdb);
+    border: transparent;
+    padding: 20px;
+    border-radius: 35px;
+    color: $couleur-blanc;
+    &:hover {
+        opacity: 0.7;
+        box-shadow: 1px 1px 15px black;
+    }   
+}
