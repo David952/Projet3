@@ -1,100 +1,102 @@
-@media screen and (max-width: $mobile){
-    .contenu__menu {
-        
-        @include contenu__menu;
+.contenu__menu {
 
-        &__titre-coeur {
-            @include flex_espace_centrer;
-            padding: 15px 25px 0 0;
+    @include contenu__menu;
+
+    &__titre-coeur {
+        @include flex_espace_centrer;
+        padding: 15px 20px 0 0;
+    }
+    .menu {
+        margin: 20px 0 35px 0;
+        animation: MenuAnimation 1.4s ease;
+        animation-fill-mode: forwards;
+        h2 {
+            font-weight: 400;
+            font-size: 20px;
+            width: 50px;
+            border-bottom: 3px solid $couleur-tertiaire;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
         }
-        .menu__coeur {
-            color: $couleur-primaire;
-            cursor: pointer;
-            font-size: 30px;
+        &__annonce {
+            display: flex;
+            height: 75px;
+            border-radius: 15px;
+            box-shadow: 5px 10px 15px #e6e6e6;
+            background-color: $couleur-blanc;
+            margin-bottom: 20px;
+            line-height: 30px;
+            overflow: hidden;
             &:hover {
-                background: linear-gradient(#a55cdb, #e771da);
+                .affichage__valider {
+                    animation: agrandi 4s ease;
+                    width: inherit;
+                    transition: animation 5s;
+                    &-icone {
+                        transition: transform .5s;
+                        transform: rotate(360deg);
+                    }
+                }
             }
         }
-        .menu {
-            margin: 20px 0 45px 0;
-            h2 {
-                font-weight: 400;
-                font-size: 20px;
-                width: 50px;
-                border-bottom: 3px solid $couleur-tertiaire;
-                padding-bottom: 5px;
-                margin-bottom: 15px;
+        &__titre-texte-prix {
+            @include flex_colonne;
+            padding: 10px 10px 10px 10px;
+            min-width: 280px;
+            flex: 1;
+        }
+        h3 {
+            font-size: 18px;
+            @include texte_pointille;
+        }
+        p {
+            @include texte_pointille;
+            padding-right: 5px;
+        }
+        &__texte-prix {
+            @include flex_espace;
+        }
+        .affichage__valider {
+            @include flex_centrer;
+            background-color: #99E2D0;
+            max-width: 75px;
+            width: 0;
+            flex-grow: 0;
+            &-icone {
+                color: $couleur-blanc;
+                font-size: 24px;
+                transform: rotate(0.5turn);
             }
-            &__annonce {
-                display: flex;
-                height: 75px;
-                border-radius: 15px;
-                box-shadow: 5px 10px 15px #e6e6e6;
-                background-color: $couleur-blanc;
-                margin-bottom: 20px;
-                line-height: 30px;
-                overflow: hidden;
-                &:hover {
-                    .affichage__valider {
-                        animation: agrandi 3s cubic-bezier(.01,.33,.95,1.07) forwards;
-                        width: inherit;
-                        transition: animation 500ms;
-                        &-icone {
-                            transition: transform .5s;
-                            transform: rotate(360deg);
-                        }
-                    }
-                    .affichage__valider::after {
-                        animation: retreci 3s cubic-bezier(.01,.33,.95,1.07) forwards;
-                        width: 0;
-                        transition: animation 500ms;
-                    }
-                }
-            }
-            @keyframes agrandi {
-                0% {
-                    flex-grow: 0
-                }
-                100% {
-                    flex-grow: 1;
-                }
-            }
-            @keyframes retreci {
-                0% {
-                    flex-grow: 1
-                }
-                100% {
-                    flex-grow: 0
-                }
-            }
-            &__titre-texte-prix {
-                @include flex_colonne;
-                padding: 10px 10px 10px 10px;
-                min-width: 280px;
-                flex: 1;
-            }
-            h3 {
-                font-size: 18px;
-                @include texte_pointille;
-            }
-            p {
-                @include texte_pointille;
-                padding-right: 5px;
-            }
-            &__texte-prix {
-                @include flex_espace;
-            }
-            .affichage__valider {
-                @include flex_centrer;
-                background-color: #99E2D0;
-                max-width: 75px;
+            &:hover {
+                animation: retreci 3s cubic-bezier(.01,.33,.95,1.07) forwards;
                 width: 0;
+                transition: animation 5s;
+            }
+        }
+        @keyframes MenuAnimation {
+            0% {
+                opacity: 0;
+                transform: translate3d(0, 100%, 0);
+            }
+            100% {
+                opacity: 1;
+                
+            }
+        }
+        @keyframes agrandi {
+            0% {
                 flex-grow: 0;
-                &-icone {
-                    color: $couleur-blanc;
-                    font-size: 24px;
-                    transform: rotate(0.5turn);
+            }
+            100% {
+                flex-grow: 1;
+            }
+        }
+        @keyframes retreci {
+            0% {
+                flex-grow: 1;
                 }
+            100% {
+                flex-grow: 0;
             }
         }
     }
