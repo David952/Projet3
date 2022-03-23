@@ -1,4 +1,6 @@
-* {
+*,
+::before,
+::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -17,9 +19,4 @@ img {
 
 .fond__gris{
     background-color: $couleur-gris;
-}
-
-.icone__coeur {
-    height: 35px;
-    mask-image: url(/images/icone/heart_icon.svg);
 }
