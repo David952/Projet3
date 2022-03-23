@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +12,7 @@
     <title>Oh My Food</title>
 </head>
 
-<body>
+<body class="fond__gris">
     <!-- LOGO -->
     <header>
         <div class="retour">
@@ -24,27 +23,27 @@
 
         <div class="logo">
             <a href="">
-                <img src="images\logo\ohmyfood.png" alt="Logo du site">
+                <img src="images/logo/ohmyfood.png" alt="Logo du site"/>
             </a>
         </div>
     </header>
     
-    <section class="photo">
-        <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Une assiète sur une table">
-    </section>
+    <div class="photo">
+        <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Une assiète sur une table"/>
+    </div>
     
-    <main class="fond__gris">
+    <main>
         <!-- CONTENU DU MENU-->
-        <div class="contenu__menu fond__gris">
+        <div class="contenu__menu">
             <div class="contenu__menu__titre-coeur">
                 <h1>À la française</h1>
                 <!-- <i class="icone lar la-heart"></i> -->
-                <img class="icone__coeur" src="/images/icone/heart_icon.svg" alt="Un coeur">
+                <img class="icone__coeur" src="/images/icone/coeur_vide.svg" alt="Un coeur"/>
             </div>
             <!-- ENTREES-->
             <section class="menu">
                 <h2 class="taille__titre">ENTRÉES</h2>
-                <div class="menu__annonce">
+                <article class="menu__annonce">
                     <div class="menu__titre-texte-prix">
                         <h3>Tartare de poulpe acidulé</h3>
                         <div class="menu__texte-prix">
@@ -55,9 +54,9 @@
                     <div class="affichage__valider">
                         <i class="affichage__valider-icone lar la-check-circle"></i>
                     </div>
-                </div>
+                </article>
            
-                <div class="menu__annonce">
+                <article class="menu__annonce">
                     <div class="menu__titre-texte-prix">
                         <h3>Velouté de légumes d'antan</h3>
                         <div class="menu__texte-prix">
@@ -68,9 +67,9 @@
                     <div class="affichage__valider">
                         <i class="affichage__valider-icone lar la-check-circle"></i>
                     </div>
-                </div>
+                </article>
                 
-                <div class="menu__annonce">
+                <article class="menu__annonce">
                     <div class="menu__titre-texte-prix">
                         <h3>Soupe à l'oignon</h3>
                         <div class="menu__texte-prix">
@@ -81,12 +80,12 @@
                     <div class="affichage__valider">
                         <i class="affichage__valider-icone lar la-check-circle"></i>
                     </div>
-                </div>
+                </article>
             </section>
             <!-- PLATS -->
             <section class="menu">
                 <h2 class="taille__titre">PLATS</h2>
-                <div class="menu__annonce">
+                <article class="menu__annonce">
                     <div class="menu__titre-texte-prix">
                         <h3>Coquilles Saint-Jacques</h3>
                         <div class="menu__texte-prix">
@@ -97,9 +96,9 @@
                     <div class="affichage__valider">
                         <i class="affichage__valider-icone lar la-check-circle"></i>
                     </div>
-                </div>
+                </article>
 
-                <div class="menu__annonce">
+                <article class="menu__annonce">
                     <div class="menu__titre-texte-prix">
                         <h3>Magret de canard</h3>
                         <div class="menu__texte-prix">
@@ -110,9 +109,9 @@
                     <div class="affichage__valider">
                         <i class="affichage__valider-icone lar la-check-circle"></i>
                     </div>
-                </div>
+                </article>
 
-                <div class="menu__annonce">
+                <article class="menu__annonce">
                     <div class="menu__titre-texte-prix">
                         <h3>Pigeonneau d’Ille-et-Vilaine</h3>
                         <div class="menu__texte-prix">
@@ -123,12 +122,12 @@
                     <div class="affichage__valider">
                         <i class="affichage__valider-icone lar la-check-circle"></i>
                     </div>
-                </div>
+                </article>
             </section>
             <!-- DESSERTS -->
             <section class="menu">
                 <h2 class="taille__titre">DESSERTS</h2>
-                <div class="menu__annonce">
+                <article class="menu__annonce">
                     <div class="menu__titre-texte-prix">
                         <h3>Pétales de violettes glacés</h3>
                         <div class="menu__texte-prix">
@@ -139,9 +138,9 @@
                     <div class="affichage__valider">
                         <i class="affichage__valider-icone lar la-check-circle"></i>
                     </div>
-                </div>
+                </article>
 
-                <div class="menu__annonce">
+                <article class="menu__annonce">
                     <div class="menu__titre-texte-prix">
                         <h3>Fondant au chocolat</h3>
                         <div class="menu__texte-prix">
@@ -152,9 +151,9 @@
                     <div class="affichage__valider">
                         <i class="affichage__valider-icone lar la-check-circle"></i>
                     </div>
-                </div>
+                </article>
                 
-                <div class="menu__annonce">
+                <article class="menu__annonce">
                     <div class="menu__titre-texte-prix">
                         <h3>Millefeuille croustillant</h3>
                         <div class="menu__texte-prix">
@@ -165,12 +164,11 @@
                     <div class="affichage__valider">
                         <i class="affichage__valider-icone lar la-check-circle"></i>
                     </div>
+                </article>
+                <div class="menu__btn">
+                    <button class="menu__btn__commander" type="submit">Commander</button>
                 </div>
             </section>
-
-            <div class="menu__btn">
-                <button class="menu__btn__commander" type="submit">Commander</button>
-            </div>
         </div>
     </main>
 
@@ -178,7 +176,9 @@
     <footer class="footer">
 
         <div class="footer__logo">
-            <img src="images/logo/ohmyfood@2x.svg">
+            <a href="index.html">
+                <img src="images/logo/ohmyfood@2x.svg" alt="Logo du site en bas de page"/>
+            </a>
         </div>
 
         <div class="footer__info">
