@@ -1,10 +1,8 @@
-@media screen and (max-width: $mobile){
-    .reserver {
-        height: 290px;
-        text-align: center;
-        padding: 25px 45px 0 45px;
-        & p {
-            margin-bottom: 30px;
-        }
+.reserver {
+    height: 290px;
+    text-align: center;
+    padding: 25px 45px 0 45px;
+    & p {
+        margin-bottom: 30px;
     }
 }
