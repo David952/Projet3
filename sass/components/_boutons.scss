@@ -1,0 +1,11 @@
+.btn {
+    @include btn;
+}
+.menu__btn {
+    @include flex_centrer;
+    padding-top: 40px;
+    &__commander {
+        @include btn;
+        padding: 20px 50px;
+    }
+}
