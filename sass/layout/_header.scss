@@ -1,20 +1,21 @@
-@media screen and (max-width: $mobile){
-    header{
-        @include flex_centrer;
-        position: relative;
-        margin-top: 5px;
-        box-shadow: 0 6px 6px #cfcfcf;
-        .retour {
-            @include position_absolute;
-            left: 15px;
-            font-size: 30px;
-        }
-        .logo {
-            height: 50px;
-            @include flex_centrer;
-        }
-        img {
-            height: 30px;
-        }
+header{
+    @include flex_centrer;
+    position: relative;
+    margin-top: 5px;
+    .retour {
+        @include position_absolute;
+        left: 15px;
+        font-size: 30px;
     }
+    .logo {
+        height: 50px;
+        @include flex_centrer;
+    }
+    img {
+        height: 30px;
+    }
+}
+
+.header__index {
+    box-shadow: 0 6px 6px #cfcfcf;
 }
