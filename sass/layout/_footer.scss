@@ -6,15 +6,29 @@
     a {
         color: $couleur-blanc;
     }
+    &__logo {
+        @include ordinateur {
+            @include flex_centrer;
+        }
+    }
     &__logo img{
         height: 20px;
         margin-bottom: 15px;
         filter: invert(100%);
     }
-    &__info {
-        display: flex;
+    &__infos {
+        @include ordinateur {
+            @include flex;
+            justify-content: space-evenly;
+        }
     }
-    &__info-3 {
+    &__info {
+        @include flex;
+    }
+    &__info-2 {
+        @include ordinateur {
+            @include flex;
+        }
         a {
             font-weight: 300;
         }
