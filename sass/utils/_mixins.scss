@@ -1,3 +1,13 @@
+@mixin ordinateur {
+    @media screen and (min-width: $ordinateur){
+       @content; 
+    }
+}
+
+@mixin flex {
+    display: flex;
+}
+
 @mixin flex_centrer {
     display: flex;
     justify-content: center;
@@ -15,13 +25,12 @@
     flex-direction: column;
 }
 
-@mixin flex_espace {
-    display: flex;
-    justify-content: space-between;
-}
-
 @mixin bord_arrondi {
     border-radius: 20px;
+}
+
+@mixin position_relative {
+    position: relative;
 }
 
 @mixin position_absolute {
@@ -32,7 +41,19 @@
     position: relative;
     border-radius: 40px 40px 0 0;
     top: -50px;
-    padding: 0 10px 0 10px;
+    padding: 0 15px 0 15px;
+}
+
+@mixin photo__image {
+    width: 100%;
+    object-fit: cover;
+}
+
+@mixin coeur_plein {
+    position: absolute;
+    width: 25px;
+    height: 35px;
+    background:url("https://community.algolia.com/places/images/svg/icon-heart-light-fc92b1e0.svg") no-repeat center center/contain;
 }
 
 @mixin texte_pointille {
@@ -47,9 +68,13 @@
     border: transparent;
     padding: 20px;
     border-radius: 35px;
+    font-size: 16px;
     color: $couleur-blanc;
+    cursor: pointer;
+    box-shadow: 0 5px 6px #cfcfcf;
     &:hover {
         opacity: 0.7;
         box-shadow: 1px 1px 15px black;
+        transform: scale(1.1);
     }   
 }
