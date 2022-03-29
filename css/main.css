@@ -15,7 +15,6 @@ a {
 
 img {
   max-width: 100%;
-  height: auto;
 }
 
 .fond__gris {
@@ -100,30 +99,61 @@ p {
           transform: scale(1.1);
 }
 
-.icone__coeur {
+.coeur__conteneur {
+  cursor: pointer;
+}
+
+.coeur__conteneur:hover .coeur__vide {
+  opacity: 0;
+}
+
+.coeur__conteneur:hover .coeur__plein {
+  opacity: 1;
+  -webkit-animation: mouvementCoeur 1s ease infinite;
+          animation: mouvementCoeur 1s ease infinite;
+}
+
+.coeur__vide {
   height: 35px;
-  font-size: 35px;
-  cursor: pointer;
-  background: -webkit-gradient(linear, left top, left bottom, from(#a55cdb), to(#e771da));
-  background: linear-gradient(to bottom, #a55cdb, #e771da);
-  color: transparent;
-  background-clip: text;
 }
 
-.icone__coeur:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+.coeur__plein {
+  position: absolute;
+  width: 25px;
+  height: 35px;
+  background: url("https://community.algolia.com/places/images/svg/icon-heart-light-fc92b1e0.svg") no-repeat center center/contain;
+  right: 5px;
+  opacity: 0;
 }
 
-.menu__coeur {
-  color: #9356DC;
-  cursor: pointer;
-  font-size: 30px;
+@-webkit-keyframes mouvementCoeur {
+  0% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  70% {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
-.menu__coeur:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#a55cdb), to(#e771da));
-  background: linear-gradient(#a55cdb, #e771da);
+@keyframes mouvementCoeur {
+  0% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  70% {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 header {
@@ -202,7 +232,7 @@ header img {
 .reserver {
   height: 290px;
   text-align: center;
-  padding: 25px 45px 0 45px;
+  padding: 30px 45px 0 45px;
 }
 
 .reserver p {
@@ -210,11 +240,27 @@ header img {
 }
 
 .fonctionnement {
-  position: relative;
   margin: 50px 25px 65px 20px;
+  position: relative;
+}
+
+@media screen and (min-width: 1024px) {
+  .fonctionnement__annonces {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
 }
 
 .fonctionnement__annonce {
+  padding: 22px;
+  -webkit-box-shadow: 0px 10px 15px #e6e6e6;
+          box-shadow: 0px 10px 15px #e6e6e6;
+  margin: 0 0 25px 15px;
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -224,15 +270,20 @@ header img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 22px;
+  position: relative;
   border-radius: 20px;
-  -webkit-box-shadow: 0px 10px 15px #e6e6e6;
-          box-shadow: 0px 10px 15px #e6e6e6;
-  margin: 0 0 25px 15px;
+}
+
+@media screen and (min-width: 1024px) {
+  .fonctionnement__annonce {
+    width: 435px;
+  }
 }
 
 .fonctionnement__annonce:hover {
   background-color: #f5edff;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .fonctionnement__annonce:hover .fonctionnement__image i {
@@ -241,27 +292,53 @@ header img {
 
 .fonctionnement__numero {
   position: absolute;
-  left: 0px;
+  left: -15px;
   background-color: #9356DC;
   color: #FFFFFF;
   height: 30px;
   width: 30px;
   padding: 7px;
-  border-radius: 20px;
   text-align: center;
+  border-radius: 20px;
 }
 
 .fonctionnement__image {
-  position: relative;
   left: -25px;
+  position: relative;
+}
+
+@media screen and (min-width: 1024px) {
+  .fonctionnement__image {
+    left: -55px;
+  }
 }
 
 .fonctionnement__image i {
   font-size: 25px;
 }
 
+.fonctionnement__texte {
+  font-weight: 600;
+}
+
 .restaurants {
   padding: 35px 15px 40px 15px;
+}
+
+@media screen and (min-width: 1024px) {
+  .restaurants__annonces {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 
 .restaurants__annonce {
@@ -270,7 +347,7 @@ header img {
   display: flex;
   position: relative;
   height: 255px;
-  margin-bottom: 15px;
+  margin: 0 5px 15px 5px;
   border-radius: 20px;
   -webkit-box-shadow: 0px 10px 15px #e6e6e6;
           box-shadow: 0px 10px 15px #e6e6e6;
@@ -278,55 +355,67 @@ header img {
   overflow: hidden;
 }
 
+@media screen and (min-width: 1024px) {
+  .restaurants__annonce {
+    width: 675px;
+  }
+}
+
 .restaurants__annonce-image {
-  position: absolute;
   top: -55px;
+  position: absolute;
 }
 
 .restaurants__annonce-image-2 {
-  position: absolute;
   top: -155px;
+  position: absolute;
 }
 
 .restaurants__annonce-image-3 {
-  position: absolute;
   top: -50px;
-}
-
-.restaurants__annonce-texte {
   position: absolute;
-  background-color: #FFFFFF;
-  height: 80px;
-  width: 100%;
-  bottom: 0;
-  padding: 13px 0 0 15px;
-  line-height: 25px;
-}
-
-.restaurants__annonce-icone {
-  position: absolute;
-  bottom: 25px;
-  right: 20px;
 }
 
 .restaurants__annonce-nouveau {
-  position: absolute;
   background-color: #99e2d0;
   border-radius: 2px;
   color: #008766;
   padding: 7px;
   top: 15px;
   right: 20px;
+  position: absolute;
+}
+
+.restaurants__annonce-nouveau p {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.restaurants__annonce-texte {
+  background-color: #FFFFFF;
+  height: 80px;
+  width: 100%;
+  bottom: 0;
+  padding: 13px 0 0 15px;
+  line-height: 25px;
+  position: absolute;
+}
+
+.restaurants__annonce-icone {
+  bottom: 25px;
+  right: 20px;
+  position: absolute;
 }
 
 .contenu__menu {
   position: relative;
   border-radius: 40px 40px 0 0;
   top: -50px;
-  padding: 0 10px 0 10px;
+  padding: 0 15px 0 15px;
 }
 
 .contenu__menu__titre-coeur {
+  padding: 15px 5px 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -336,24 +425,38 @@ header img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 15px 20px 0 0;
+}
+
+.contenu__menu__coeur-plein {
+  position: absolute;
+  width: 25px;
+  height: 35px;
+  background: url("https://community.algolia.com/places/images/svg/icon-heart-light-fc92b1e0.svg") no-repeat center center/contain;
+  right: 24px;
 }
 
 .contenu__menu .menu {
   margin: 20px 0 35px 0;
-  -webkit-animation: MenuAnimation 1.4s ease;
-          animation: MenuAnimation 1.4s ease;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  -webkit-animation: menuAnimation 1s ease forwards;
+          animation: menuAnimation 1s ease forwards;
 }
 
 .contenu__menu .menu h2 {
   font-weight: 400;
   font-size: 20px;
-  width: 50px;
-  border-bottom: 3px solid #99E2D0;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   margin-bottom: 15px;
+  position: relative;
+}
+
+.contenu__menu .menu__bordure:after {
+  content: "";
+  height: 4px;
+  width: 50px;
+  background-color: #99E2D0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 .contenu__menu .menu__annonce {
@@ -387,6 +490,20 @@ header img {
   transition: transform .5s, -webkit-transform .5s;
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
+}
+
+.contenu__menu .menu__annonce:not(:hover) .affichage__valider {
+  -webkit-animation: retreci .5s ease forwards;
+          animation: retreci .5s ease forwards;
+}
+
+.contenu__menu .menu__annonce:not(:hover) .affichage__valider-icone {
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 
 .contenu__menu .menu__titre-texte-prix {
@@ -454,17 +571,7 @@ header img {
           transform: rotate(0.5turn);
 }
 
-.contenu__menu .menu .affichage__valider:hover {
-  -webkit-animation: retreci 3s cubic-bezier(0.01, 0.33, 0.95, 1.07) forwards;
-          animation: retreci 3s cubic-bezier(0.01, 0.33, 0.95, 1.07) forwards;
-  width: 0;
-  -webkit-transition: -webkit-animation 5s;
-  transition: -webkit-animation 5s;
-  transition: animation 5s;
-  transition: animation 5s, -webkit-animation 5s;
-}
-
-@-webkit-keyframes MenuAnimation {
+@-webkit-keyframes menuAnimation {
   0% {
     opacity: 0;
     -webkit-transform: translate3d(0, 100%, 0);
@@ -475,7 +582,7 @@ header img {
   }
 }
 
-@keyframes MenuAnimation {
+@keyframes menuAnimation {
   0% {
     opacity: 0;
     -webkit-transform: translate3d(0, 100%, 0);
@@ -545,11 +652,36 @@ header img {
   color: #FFFFFF;
 }
 
+@media screen and (min-width: 1024px) {
+  .footer__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .footer__logo img {
   height: 20px;
   margin-bottom: 15px;
   -webkit-filter: invert(100%);
           filter: invert(100%);
+}
+
+@media screen and (min-width: 1024px) {
+  .footer__infos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
 }
 
 .footer__info {
@@ -558,7 +690,15 @@ header img {
   display: flex;
 }
 
-.footer__info-3 a {
+@media screen and (min-width: 1024px) {
+  .footer__info-2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.footer__info-2 a {
   font-weight: 300;
 }
 
@@ -666,20 +806,38 @@ header img {
   }
 }
 
-@media screen and (max-width: 768px) {
-  .photo {
-    overflow: hidden;
+.photo {
+  overflow: hidden;
+}
+
+@media screen and (min-width: 1024px) {
+  .photo__menu {
+    height: 465px;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
-  .photo__lne {
-    position: relative;
-    top: -95px;
+}
+
+.photo__menu-lne {
+  position: relative;
+  top: -95px;
+}
+
+@media screen and (min-width: 1024px) {
+  .photo__menu-lne {
+    height: 640px;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
-  .contenu__menu-lne {
-    position: relative;
-    border-radius: 40px 40px 0 0;
-    top: -50px;
-    padding: 0 10px 0 10px;
-    height: 1160px;
-    top: -250px;
-  }
+}
+
+.contenu__menu-lne {
+  position: relative;
+  border-radius: 40px 40px 0 0;
+  top: -50px;
+  padding: 0 15px 0 15px;
+  height: 1160px;
+  top: -250px;
 }
