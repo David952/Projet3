@@ -29,20 +29,20 @@
     </header>
     
     <div class="photo">
-        <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Une assiète sur une table"/>
+        <img class="photo__menu" src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Une assiète sur une table"/>
     </div>
     
     <main>
         <!-- CONTENU DU MENU-->
-        <div class="contenu__menu">
-            <div class="contenu__menu__titre-coeur">
+        <div class="contenu__menu fond__gris">
+            <div class="contenu__menu__titre-coeur coeur__conteneur">
                 <h1>À la française</h1>
-                <!-- <i class="icone lar la-heart"></i> -->
-                <img class="icone__coeur" src="/images/icone/coeur_vide.svg" alt="Un coeur"/>
+                <img class="coeur__vide" src="/images/icone/coeur_vide.svg" alt="Un coeur">
+                <span class="coeur__plein"></span>
             </div>
             <!-- ENTREES-->
             <section class="menu">
-                <h2 class="taille__titre">ENTRÉES</h2>
+                <h2 class="menu__bordure taille__titre">ENTRÉES</h2>
                 <article class="menu__annonce">
                     <div class="menu__titre-texte-prix">
                         <h3>Tartare de poulpe acidulé</h3>
@@ -84,7 +84,7 @@
             </section>
             <!-- PLATS -->
             <section class="menu">
-                <h2 class="taille__titre">PLATS</h2>
+                <h2 class="bordure__menu taille__titre">PLATS</h2>
                 <article class="menu__annonce">
                     <div class="menu__titre-texte-prix">
                         <h3>Coquilles Saint-Jacques</h3>
@@ -126,7 +126,7 @@
             </section>
             <!-- DESSERTS -->
             <section class="menu">
-                <h2 class="taille__titre">DESSERTS</h2>
+                <h2 class="bordure__menu taille__titre">DESSERTS</h2>
                 <article class="menu__annonce">
                     <div class="menu__titre-texte-prix">
                         <h3>Pétales de violettes glacés</h3>
@@ -181,23 +181,27 @@
             </a>
         </div>
 
-        <div class="footer__info">
-            <div class="footer__info-icone">
-                <i class="las la-utensils"></i>
+        <div class="footer__infos">
+            <div class="footer__info">
+                <div class="footer__info-icone">
+                    <i class="las la-utensils"></i>
+                </div>
+                <a href="">Proposer un restaurant</a>
             </div>
-            <a href="">Proposer un restaurant</a>
-        </div>
 
-        <div class="footer__info">
-            <div class="footer__info-icone">
-                <i class="las la-hands-helping"></i>
+            <div class="footer__info">
+                <div class="footer__info-icone">
+                    <i class="las la-hands-helping"></i>
+                </div>
+                <a href="">Devenir partenaire</a>
             </div>
-            <a href="">Devenir partenaire</a>
-        </div>
 
-        <div class="footer__info-3">
-            <a href="">Mentions légales</a><br/>
-            <a href="mailto:test@test.com">Contact</a>
+            <div class="footer__info-2">
+                <a href="">Mentions légales</a>
+            </div>
+            <div class="footer__info-2">
+                <a href="mailto:test@test.com">Contact</a>
+            </div>
         </div>
     </footer>
     
