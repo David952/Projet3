@@ -1,25 +1,23 @@
-@media screen and (max-width: $mobile){
-    .photo {
+.photo {
+    @include ordinateur {
+        &__menu {
+            height: 465px;
+            @include photo__image;
+        }
+    }
+    overflow: hidden;
+    &__menu-lne  {
         position: relative;
-        overflow: hidden;
-        &__lne  {
-            position: relative;
-            top: -95px
+        top: -95px;
+        @include ordinateur {
+            height: 640px;
+            @include photo__image;
         }
     }
+}
 
-    .contenu__menu-lne {
-        @include contenu__menu;
-        height: 1160px;
-        top: -250px;
-    }
-
-    .menu__btn {
-        @include flex_centrer;
-        padding-bottom: 25px;
-        &__commander {
-            @include btn;
-            padding: 20px 50px;
-        }
-    }
+.contenu__menu-lne {
+    @include contenu__menu;
+    height: 1160px;
+    top: -250px;
 }
