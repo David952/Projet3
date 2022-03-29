@@ -1,49 +1,67 @@
 .restaurants {
     padding: 35px 15px 40px 15px;
+    &__annonces {
+        @include ordinateur{
+            @include flex_centrer;
+            justify-content: space-around;
+        }
+    }
     &__annonce {
         display: flex;
         position: relative;
         height: 255px;
-        margin-bottom: 15px;
+        margin: 0 5px 15px 5px;
         border-radius: 20px;
         box-shadow: 0px 10px 15px #e6e6e6;
         background-color: $couleur-blanc;
         overflow: hidden;
+        @include ordinateur {
+            width: 675px;
+        }
     }
+
     &__annonce-image {
-        @include position_absolute;
         top: -55px;
+        @include position_absolute;
     }
+
     &__annonce-image-2 {
-        @include position_absolute;
         top: -155px;
+        @include position_absolute;
     }
-        
+
     &__annonce-image-3 {
-        @include position_absolute;
         top: -50px;
-    }
-    &__annonce-texte {
         @include position_absolute;
-        background-color: $couleur-blanc;
-        height: 80px;
-        width: 100%;
-        bottom: 0;
-        padding: 13px 0 0 15px;
-        line-height: 25px;
     }
-    &__annonce-icone {
-        @include position_absolute;
-        bottom: 25px;
-        right: 20px;
-    }
+
     &__annonce-nouveau {
-        @include position_absolute;
         background-color: #99e2d0;
         border-radius: 2px;
         color: #008766;
         padding: 7px;
         top: 15px;
         right: 20px;
+        @include position_absolute;
+        p {
+            font-size: 14px;
+            font-weight: 600;
+        }
+    }
+
+    &__annonce-texte {
+        background-color: $couleur-blanc;
+        height: 80px;
+        width: 100%;
+        bottom: 0;
+        padding: 13px 0 0 15px;
+        line-height: 25px;
+        @include position_absolute;
+    }
+    
+    &__annonce-icone {
+        bottom: 25px;
+        right: 20px;
+        @include position_absolute;
     }
 }
