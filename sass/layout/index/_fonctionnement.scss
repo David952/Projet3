@@ -1,14 +1,26 @@
 .fonctionnement {
-    position: relative;
     margin: 50px 25px 65px 20px;
+    @include position_relative;
+    &__annonces {
+        @include ordinateur {
+            @include flex;
+            justify-content: space-evenly;
+        }
+    }
     &__annonce {
-        @include flex_centrer;
         padding: 22px;
-        @include bord_arrondi;
         box-shadow: 0px 10px 15px #e6e6e6;
         margin: 0 0 25px 15px;
+        cursor: pointer;
+        @include flex_centrer;
+        @include position_relative;
+        @include bord_arrondi;
+        @include ordinateur {
+            width: 435px;
+        }
         &:hover {
             background-color: #f5edff;
+            transform: scale(1.1);
             .fonctionnement__image i {
                 color: $couleur-primaire;
             }
@@ -16,20 +28,27 @@
     }
     &__numero {
         position: absolute;
-        left: 0px;
+        left: -15px;
         background-color: $couleur-primaire;
         color: $couleur-blanc;
         height: 30px;
         width: 30px;
         padding: 7px;
-        @include bord_arrondi;
         text-align: center;
+        @include bord_arrondi;
     }
     &__image {
-        position: relative;
         left: -25px;
+        @include position_relative;
+        @include ordinateur {
+            left: -55px;
+        }
+
     }
     &__image i {
         font-size: 25px;
+    }
+    &__texte {
+        font-weight: 600;
     }
 }
