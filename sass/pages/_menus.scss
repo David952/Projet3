@@ -1,11 +1,11 @@
 .photo {
+    overflow: hidden;
     @include ordinateur {
         &__menu {
             height: 465px;
             @include photo__image;
         }
     }
-    overflow: hidden;
     &__menu-lne  {
         position: relative;
         top: -95px;

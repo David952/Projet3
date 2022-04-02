@@ -1,16 +1,21 @@
 .restaurants {
     padding: 35px 15px 40px 15px;
+
     &__annonces {
-        @include ordinateur{
+        @include ordinateur {
             @include flex_centrer;
             justify-content: space-around;
+            :hover {
+                box-shadow: 1px 1px 15px $couleur-primaire;
+            }
         }
     }
+
     &__annonce {
         display: flex;
         position: relative;
         height: 255px;
-        margin: 0 5px 15px 5px;
+        margin: 0 5px 20px 5px;
         border-radius: 20px;
         box-shadow: 0px 10px 15px #e6e6e6;
         background-color: $couleur-blanc;
@@ -18,19 +23,22 @@
         @include ordinateur {
             width: 675px;
         }
+        :hover{
+            box-shadow: none;
+        }
     }
 
-    &__annonce-image {
+    &__annonce__image img {
         top: -55px;
         @include position_absolute;
     }
 
-    &__annonce-image-2 {
-        top: -155px;
+    &__annonce__image-2 img {
+        bottom: -14px;
         @include position_absolute;
     }
 
-    &__annonce-image-3 {
+    &__annonce__image-3 img {
         top: -50px;
         @include position_absolute;
     }
@@ -44,7 +52,7 @@
         right: 20px;
         @include position_absolute;
         p {
-            font-size: 14px;
+            padding: 2px 6px 0;
             font-weight: 600;
         }
     }

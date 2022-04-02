@@ -1,5 +1,90 @@
-@media screen and (max-width: $mobile){
-    .btn {
-        @include btn;
+/* Chargement de la page */
+.conteneur__chargement {
+    @include flex_centrer;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #353535;
+    position: fixed;
+    opacity: 0.9;
+    z-index: 10;
+    animation: FinChargement 200ms 3s forwards;
+    .chargement {
+        display: block;
+        position: relative;
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        border: 10px solid transparent;
+        border-top-color: $couleur-primaire;
+        animation: ChargementRotation 2s linear infinite;
+        &:before, &:after {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            border: 7px solid transparent;
+        }
+        &:before {
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border-top-color: $couleur-secondaire;
+            animation: ChargementRotation 3s linear infinite;
+            
+        }
+        &:after {
+            top: 25px;
+            left: 25px;
+            right: 25px;
+            bottom: 25px;
+            border-top-color: $couleur-tertiaire;
+            animation: ChargementRotation 1.5s linear infinite;
+            
+        }
+    }
+}
+@keyframes ChargementRotation {
+    from {
+        transform: rotate(0deg);
+        
+    }
+    to {
+        transform: rotate(360deg);
+        
+    }
+}
+@keyframes FinChargement {
+    to {
+        visibility: hidden;
+    }
+}
+
+/* FONCTIONNEMENT */
+@include mobile {
+    .icone-1 {
+        left: $position_icone-1;
+    }
+    .icone-2 {
+        left: $position_icone-2;
+    }
+}
+
+@include tablette {
+    .icone-1 {
+        left: $position_icone-1;
+    }
+    .icone-2 {
+        left: $position_icone-2;
+    }
+}
+
+/* RESTAURANTS */
+@include mobile {
+    .coeur__plein-index {
+        right: 0px;
+        @include coeur_plein;
     }
 }

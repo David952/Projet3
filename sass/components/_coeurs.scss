@@ -1,5 +1,6 @@
 .coeur__conteneur {
     cursor: pointer;
+
     &:hover {
         .coeur__vide {
             opacity: 0;
@@ -16,9 +17,18 @@
 }
 
 .coeur__plein {
+    right: 20px;
     @include coeur_plein;
-    right: 5px;
-    opacity: 0;
+}
+
+.coeur__plein-index {
+    right: 0;
+    @include coeur_plein;
+}
+
+.coeur__plein-image {
+    height: 1443px;
+    width: 1601px;
 }
 
 @keyframes mouvementCoeur{

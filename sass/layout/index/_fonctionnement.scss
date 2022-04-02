@@ -1,12 +1,14 @@
 .fonctionnement {
     margin: 50px 25px 65px 20px;
     @include position_relative;
+
     &__annonces {
         @include ordinateur {
             @include flex;
             justify-content: space-evenly;
         }
     }
+
     &__annonce {
         padding: 22px;
         box-shadow: 0px 10px 15px #e6e6e6;
@@ -26,6 +28,7 @@
             }
         }
     }
+
     &__numero {
         position: absolute;
         left: -15px;
@@ -37,17 +40,19 @@
         text-align: center;
         @include bord_arrondi;
     }
-    &__image {
-        left: -25px;
+
+    &__icone {
+        left: -22px;
         @include position_relative;
         @include ordinateur {
-            left: -55px;
+            left: -25px;
         }
-
     }
-    &__image i {
+
+    &__icone i {
         font-size: 25px;
     }
+    
     &__texte {
         font-weight: 600;
     }
