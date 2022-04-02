@@ -1,6 +1,6 @@
 *,
-::before,
-::after {
+:before,
+:after {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -44,8 +44,8 @@ p {
 }
 
 .btn {
-  background: -webkit-gradient(linear, left top, left bottom, from(#e771da), to(#a55cdb));
-  background: linear-gradient(#e771da, #a55cdb);
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
   border: transparent;
   padding: 20px;
   border-radius: 35px;
@@ -78,8 +78,8 @@ p {
 }
 
 .menu__btn__commander {
-  background: -webkit-gradient(linear, left top, left bottom, from(#e771da), to(#a55cdb));
-  background: linear-gradient(#e771da, #a55cdb);
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
   border: transparent;
   padding: 20px;
   border-radius: 35px;
@@ -118,12 +118,26 @@ p {
 }
 
 .coeur__plein {
+  right: 20px;
   position: absolute;
-  width: 25px;
   height: 35px;
-  background: url("https://community.algolia.com/places/images/svg/icon-heart-light-fc92b1e0.svg") no-repeat center center/contain;
-  right: 5px;
   opacity: 0;
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+}
+
+.coeur__plein-index {
+  right: 0;
+  position: absolute;
+  height: 35px;
+  opacity: 0;
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+}
+
+.coeur__plein-image {
+  height: 1443px;
+  width: 1601px;
 }
 
 @-webkit-keyframes mouvementCoeur {
@@ -199,6 +213,9 @@ header img {
 }
 
 .location {
+  height: 50px;
+  background-color: #eaeaea;
+  margin-top: 2px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -208,9 +225,6 @@ header img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 50px;
-  background-color: #eaeaea;
-  margin-top: 2px;
 }
 
 .location__icone {
@@ -302,18 +316,18 @@ header img {
   border-radius: 20px;
 }
 
-.fonctionnement__image {
-  left: -25px;
+.fonctionnement__icone {
+  left: -22px;
   position: relative;
 }
 
 @media screen and (min-width: 1024px) {
-  .fonctionnement__image {
-    left: -55px;
+  .fonctionnement__icone {
+    left: -25px;
   }
 }
 
-.fonctionnement__image i {
+.fonctionnement__icone i {
   font-size: 25px;
 }
 
@@ -339,6 +353,10 @@ header img {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
+  .restaurants__annonces :hover {
+    -webkit-box-shadow: 1px 1px 15px #9356DC;
+            box-shadow: 1px 1px 15px #9356DC;
+  }
 }
 
 .restaurants__annonce {
@@ -347,7 +365,7 @@ header img {
   display: flex;
   position: relative;
   height: 255px;
-  margin: 0 5px 15px 5px;
+  margin: 0 5px 20px 5px;
   border-radius: 20px;
   -webkit-box-shadow: 0px 10px 15px #e6e6e6;
           box-shadow: 0px 10px 15px #e6e6e6;
@@ -361,17 +379,22 @@ header img {
   }
 }
 
-.restaurants__annonce-image {
+.restaurants__annonce :hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.restaurants__annonce__image img {
   top: -55px;
   position: absolute;
 }
 
-.restaurants__annonce-image-2 {
-  top: -155px;
+.restaurants__annonce__image-2 img {
+  bottom: -14px;
   position: absolute;
 }
 
-.restaurants__annonce-image-3 {
+.restaurants__annonce__image-3 img {
   top: -50px;
   position: absolute;
 }
@@ -387,7 +410,7 @@ header img {
 }
 
 .restaurants__annonce-nouveau p {
-  font-size: 14px;
+  padding: 2px 6px 0;
   font-weight: 600;
 }
 
@@ -429,16 +452,15 @@ header img {
 
 .contenu__menu__coeur-plein {
   position: absolute;
-  width: 25px;
   height: 35px;
-  background: url("https://community.algolia.com/places/images/svg/icon-heart-light-fc92b1e0.svg") no-repeat center center/contain;
+  opacity: 0;
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
   right: 24px;
 }
 
 .contenu__menu .menu {
   margin: 20px 0 35px 0;
-  -webkit-animation: menuAnimation 1s ease forwards;
-          animation: menuAnimation 1s ease forwards;
 }
 
 .contenu__menu .menu h2 {
@@ -471,16 +493,15 @@ header img {
   margin-bottom: 20px;
   line-height: 30px;
   overflow: hidden;
+  -webkit-animation: menuAnimation 1.1s ease forwards;
+          animation: menuAnimation 1.1s ease forwards;
 }
 
 .contenu__menu .menu__annonce:hover .affichage__valider {
-  -webkit-animation: agrandi 4s ease;
-          animation: agrandi 4s ease;
-  width: inherit;
-  -webkit-transition: -webkit-animation 5s;
-  transition: -webkit-animation 5s;
-  transition: animation 5s;
-  transition: animation 5s, -webkit-animation 5s;
+  width: 75px;
+  opacity: 1;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
 }
 
 .contenu__menu .menu__annonce:hover .affichage__valider-icone {
@@ -493,8 +514,9 @@ header img {
 }
 
 .contenu__menu .menu__annonce:not(:hover) .affichage__valider {
-  -webkit-animation: retreci .5s ease forwards;
-          animation: retreci .5s ease forwards;
+  width: 0;
+  -webkit-transition-duration: 0.9s;
+          transition-duration: 0.9s;
 }
 
 .contenu__menu .menu__annonce:not(:hover) .affichage__valider-icone {
@@ -559,9 +581,7 @@ header img {
   background-color: #99E2D0;
   max-width: 75px;
   width: 0;
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
+  opacity: 0;
 }
 
 .contenu__menu .menu .affichage__valider-icone {
@@ -574,10 +594,12 @@ header img {
 @-webkit-keyframes menuAnimation {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-            transform: translate3d(0, 100%, 0);
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
   }
   100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 1;
   }
 }
@@ -585,59 +607,13 @@ header img {
 @keyframes menuAnimation {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-            transform: translate3d(0, 100%, 0);
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
   }
   100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 1;
-  }
-}
-
-@-webkit-keyframes agrandi {
-  0% {
-    -webkit-box-flex: 0;
-            flex-grow: 0;
-  }
-  100% {
-    -webkit-box-flex: 1;
-            flex-grow: 1;
-  }
-}
-
-@keyframes agrandi {
-  0% {
-    -webkit-box-flex: 0;
-        -ms-flex-positive: 0;
-            flex-grow: 0;
-  }
-  100% {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-  }
-}
-
-@-webkit-keyframes retreci {
-  0% {
-    -webkit-box-flex: 1;
-            flex-grow: 1;
-  }
-  100% {
-    -webkit-box-flex: 0;
-            flex-grow: 0;
-  }
-}
-
-@keyframes retreci {
-  0% {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-  }
-  100% {
-    -webkit-box-flex: 0;
-        -ms-flex-positive: 0;
-            flex-grow: 0;
   }
 }
 
@@ -710,6 +686,7 @@ header img {
   font-size: 20px;
 }
 
+/* Chargement de la page */
 .conteneur__chargement {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -745,14 +722,14 @@ header img {
           animation: ChargementRotation 2s linear infinite;
 }
 
-.conteneur__chargement .chargement::before, .conteneur__chargement .chargement::after {
+.conteneur__chargement .chargement:before, .conteneur__chargement .chargement:after {
   content: "";
   position: absolute;
   border-radius: 50%;
   border: 7px solid transparent;
 }
 
-.conteneur__chargement .chargement::before {
+.conteneur__chargement .chargement:before {
   top: 10px;
   left: 10px;
   right: 10px;
@@ -762,7 +739,7 @@ header img {
           animation: ChargementRotation 3s linear infinite;
 }
 
-.conteneur__chargement .chargement::after {
+.conteneur__chargement .chargement:after {
   top: 25px;
   left: 25px;
   right: 25px;
@@ -803,6 +780,37 @@ header img {
 @keyframes FinChargement {
   to {
     visibility: hidden;
+  }
+}
+
+/* FONCTIONNEMENT */
+@media screen and (max-width: 425px) {
+  .icone-1 {
+    left: -19px;
+  }
+  .icone-2 {
+    left: -25px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .icone-1 {
+    left: -19px;
+  }
+  .icone-2 {
+    left: -25px;
+  }
+}
+
+/* RESTAURANTS */
+@media screen and (max-width: 425px) {
+  .coeur__plein-index {
+    right: 0px;
+    position: absolute;
+    height: 35px;
+    opacity: 0;
+    -webkit-transition-duration: 0.6s;
+            transition-duration: 0.6s;
   }
 }
 
