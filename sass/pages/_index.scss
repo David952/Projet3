@@ -80,11 +80,3 @@
         left: $position_icone-2;
     }
 }
-
-/* RESTAURANTS */
-@include mobile {
-    .coeur__plein-index {
-        right: 0px;
-        @include coeur_plein;
-    }
-}
