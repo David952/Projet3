@@ -1,3 +1,6 @@
+@charset "UTF-8";
+/* Les variables permettent de stocker des valeurs répétées fréquemment. */
+/* Les mixins permettent de stocker des blocs de code qui seront réutilisables. */
 *,
 :before,
 :after {
@@ -52,8 +55,8 @@ p {
   font-size: 16px;
   color: #FFFFFF;
   cursor: pointer;
-  -webkit-box-shadow: 0 5px 6px #cfcfcf;
-          box-shadow: 0 5px 6px #cfcfcf;
+  -webkit-box-shadow: 0 5px 6px #eaeaea;
+          box-shadow: 0 5px 6px #eaeaea;
 }
 
 .btn:hover {
@@ -86,8 +89,8 @@ p {
   font-size: 16px;
   color: #FFFFFF;
   cursor: pointer;
-  -webkit-box-shadow: 0 5px 6px #cfcfcf;
-          box-shadow: 0 5px 6px #cfcfcf;
+  -webkit-box-shadow: 0 5px 6px #eaeaea;
+          box-shadow: 0 5px 6px #eaeaea;
   padding: 20px 50px;
 }
 
@@ -119,25 +122,25 @@ p {
 
 .coeur__plein {
   right: 20px;
+  fill: url(#dégradé);
   position: absolute;
   height: 35px;
+  width: 35px;
   opacity: 0;
-  -webkit-transition-duration: 0.6s;
-          transition-duration: 0.6s;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 
 .coeur__plein-index {
   right: 0;
-  position: absolute;
-  height: 35px;
-  opacity: 0;
-  -webkit-transition-duration: 0.6s;
-          transition-duration: 0.6s;
 }
 
-.coeur__plein-image {
-  height: 1443px;
-  width: 1601px;
+.dégradé-1 {
+  stop-color: #9356DC;
+}
+
+.dégradé-2 {
+  stop-color: #FF79DA;
 }
 
 @-webkit-keyframes mouvementCoeur {
@@ -296,11 +299,9 @@ header img {
 
 .fonctionnement__annonce:hover {
   background-color: #f5edff;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
 }
 
-.fonctionnement__annonce:hover .fonctionnement__image i {
+.fonctionnement__annonce:hover .fonctionnement__icone i {
   color: #9356DC;
 }
 
@@ -453,9 +454,10 @@ header img {
 .contenu__menu__coeur-plein {
   position: absolute;
   height: 35px;
+  width: 35px;
   opacity: 0;
-  -webkit-transition-duration: 0.6s;
-          transition-duration: 0.6s;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
   right: 24px;
 }
 
@@ -487,8 +489,8 @@ header img {
   display: flex;
   height: 75px;
   border-radius: 15px;
-  -webkit-box-shadow: 5px 10px 15px #e6e6e6;
-          box-shadow: 5px 10px 15px #e6e6e6;
+  -webkit-box-shadow: 5px 10px 15px #eaeaea;
+          box-shadow: 5px 10px 15px #eaeaea;
   background-color: #FFFFFF;
   margin-bottom: 20px;
   line-height: 30px;
@@ -799,18 +801,6 @@ header img {
   }
   .icone-2 {
     left: -25px;
-  }
-}
-
-/* RESTAURANTS */
-@media screen and (max-width: 425px) {
-  .coeur__plein-index {
-    right: 0px;
-    position: absolute;
-    height: 35px;
-    opacity: 0;
-    -webkit-transition-duration: 0.6s;
-            transition-duration: 0.6s;
   }
 }
 
