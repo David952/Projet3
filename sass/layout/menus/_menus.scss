@@ -35,7 +35,7 @@
             display: flex;
             height: 75px;
             border-radius: 15px;
-            box-shadow: 5px 10px 15px #e6e6e6;
+            box-shadow: 5px 10px 15px $couleur-gris-fonce;
             background-color: $couleur-blanc;
             margin-bottom: 20px;
             line-height: 30px;
@@ -88,7 +88,7 @@
 
         .affichage__valider {
             @include flex_centrer;
-            background-color: #99E2D0;
+            background-color: $couleur-tertiaire;
             max-width: 75px;
             width: 0;
             opacity: 0;
