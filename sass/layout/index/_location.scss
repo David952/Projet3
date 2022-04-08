@@ -1,6 +1,6 @@
 .location {
     height: 50px;
-    background-color: #eaeaea;
+    background-color: $couleur-gris-fonce;
     margin-top: 2px;
     @include flex_centrer;
 
@@ -15,7 +15,7 @@
     &__texte {
         border: none;
         width: 140px;
-        background-color: #eaeaea;
+        background-color: $couleur-gris-fonce;
         font-size: 17px;
         font-weight: bold;
     }
