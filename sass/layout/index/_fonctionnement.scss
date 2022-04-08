@@ -22,8 +22,7 @@
         }
         &:hover {
             background-color: #f5edff;
-            transform: scale(1.1);
-            .fonctionnement__image i {
+            .fonctionnement__icone i {
                 color: $couleur-primaire;
             }
         }
