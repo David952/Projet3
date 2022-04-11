@@ -3,15 +3,12 @@
     background-color: $couleur-gris-fonce;
     margin-top: 2px;
     @include flex_centrer;
-
     &__icone {
         margin-right: 10px;
     }
-
     &__icone img {
         height: 18px;
     }
-
     &__texte {
         border: none;
         width: 140px;
