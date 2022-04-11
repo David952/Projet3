@@ -1,4 +1,7 @@
-/* Chargement de la page */
+/* Chargement de la page
+   animation: name | duration | fill-mode
+   forwards: Retient la valeur définit lors de la dernière étape (keyframes)
+*/
 .conteneur__chargement {
     @include flex_centrer;
     height: 100vh;
@@ -10,7 +13,12 @@
     position: fixed;
     opacity: 0.9;
     z-index: 10;
-    animation: FinChargement 200ms 3s forwards;
+    animation: FinChargement 3s forwards;
+
+    /* animation: name | duration | timing-function | iteration-count
+       linear: l'animation s'effectue à vitesse constante.
+       3: le nombre de répétition pour l'animation.
+    */
     .chargement {
         display: block;
         position: relative;
@@ -19,7 +27,7 @@
         border-radius: 50%;
         border: 10px solid transparent;
         border-top-color: $couleur-primaire;
-        animation: ChargementRotation 2s linear infinite;
+        animation: ChargementRotation 2s linear 3;
         &:before, &:after {
             content: "";
             position: absolute;
@@ -32,7 +40,7 @@
             right: 10px;
             bottom: 10px;
             border-top-color: $couleur-secondaire;
-            animation: ChargementRotation 3s linear infinite;
+            animation: ChargementRotation 3s linear 3;
             
         }
         &:after {
@@ -41,11 +49,11 @@
             right: 25px;
             bottom: 25px;
             border-top-color: $couleur-tertiaire;
-            animation: ChargementRotation 1.5s linear infinite;
-            
+            animation: ChargementRotation 1.5s linear 3;
         }
     }
 }
+/* L'élement va faire une rotation complète sur lui-même. */
 @keyframes ChargementRotation {
     from {
         transform: rotate(0deg);
@@ -56,6 +64,7 @@
         
     }
 }
+/* Le conteneur du chargement sera masqué à la fin de l'animation. */
 @keyframes FinChargement {
     to {
         visibility: hidden;
