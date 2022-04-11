@@ -1,7 +1,6 @@
 .btn {
     @include btn;
 }
-
 .menu__btn {
     @include flex_centrer;
     padding-top: 40px;

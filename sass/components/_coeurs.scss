@@ -1,6 +1,8 @@
 .coeur__conteneur {
     cursor: pointer;
-
+    /*  animation: name | duration | timing-function | iteration-count
+        ease: la vitesse de l'animation augmente au milieu de celle-ci puis ralentit à la fin.
+    */
     &:hover {
         .coeur__vide {
             opacity: 0;
@@ -11,26 +13,24 @@
         }
     }
 }
-
 .coeur__vide {
     height: 35px;
 }
-
 .coeur__plein {
     right: 20px;
+    fill: url(#dégradé);
     @include coeur_plein;
 }
-
 .coeur__plein-index {
     right: 0;
-    @include coeur_plein;
 }
-
-.coeur__plein-image {
-    height: 1443px;
-    width: 1601px;
+.dégradé-1 {
+    stop-color: $couleur-primaire;
 }
-
+.dégradé-2 {
+    stop-color: $couleur-secondaire;
+}
+/* On définit des zooms à plusieurs étapes de la séquence. */
 @keyframes mouvementCoeur{
     0%{
       transform:scale(1.3)
