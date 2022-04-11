@@ -1,11 +1,11 @@
 header{
-    @include flex_centrer;
     position: relative;
     margin-top: 5px;
+    @include flex_centrer;
     .retour {
-        @include position_absolute;
         left: 15px;
         font-size: 30px;
+        @include position_absolute;
     }
     .logo {
         height: 50px;
@@ -15,7 +15,6 @@ header{
         height: 30px;
     }
 }
-
 .header__index {
     box-shadow: 0 6px 6px #cfcfcf;
 }

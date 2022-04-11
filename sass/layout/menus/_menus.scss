@@ -1,16 +1,13 @@
 .contenu__menu {
     @include contenu__menu;
-
     &__titre-coeur {
         padding: 15px 5px 0 0;
         @include flex_espace_centrer;
     }
-
     &__coeur-plein {
-        @include coeur_plein;
         right: 24px;
+        @include coeur_plein;
     }
-
     .menu {
         margin: 20px 0 35px 0;
         h2 {
@@ -20,7 +17,6 @@
             margin-bottom: 15px;
             position: relative;
         }
-
         &__bordure:after {
             content: "";
             height: 4px;
@@ -30,7 +26,10 @@
             left: 0;
             bottom: 0;
         }
-
+        /* animation: name | duration | timing-function | fill-mode
+           ease: la vitesse de l'animation augmente au milieu de celle-ci puis ralentit à la fin.
+           forwards: Retient la valeur définit lors de la dernière étape
+        */
         &__annonce {
             display: flex;
             height: 75px;
@@ -41,64 +40,68 @@
             line-height: 30px;
             overflow: hidden;
             animation: menuAnimation 1.1s ease forwards;
+            
+            /* transition : property | duration | timing-function
+               ease-in-out: l'animation commence lentement, accèlere puis ralentit à nouveau avant la fin.
+            */
             &:hover {
                 .affichage__valider {
                     width: 75px;
                     opacity: 1;
                     transition: width 0.4s ease-in-out;
                     &-icone {
-                        transition: transform .5s;
+                        transition: transform 0.5s;
                         transform: rotate(360deg);
                     }
                 }
             }
+            /* On définit la durée de rétrécissement de notre conteneur "affichage_valider" avec transition-duration. */
             &:not(:hover) {
                 .affichage__valider {
                     width: 0;
                     transition-duration: 0.9s;
+                    /* On met l'icone à l'endroit tout en appliquant la durée de la rotation. */
                     &-icone {
-                        transition: transform .3s;
+                        transition: transform 0.3s;
                         transform: rotate(0deg);
                     }
                 }
             }
         }
-
         &__titre-texte-prix {
             @include flex_colonne;
             padding: 10px 10px 10px 10px;
             min-width: 280px;
             flex: 1;
         }
-
         h3 {
             font-size: 18px;
             @include texte_pointille;
         }
-        
         p {
-            @include texte_pointille;
             padding-right: 5px;
+            @include texte_pointille;
         }
-
         &__texte-prix {
             @include flex;
             justify-content: space-between;
         }
-
         .affichage__valider {
             @include flex_centrer;
             background-color: $couleur-tertiaire;
             max-width: 75px;
             width: 0;
             opacity: 0;
+            /* On met l'icone à l'envers par défaut (transform: rotate) */
             &-icone {
                 color: $couleur-blanc;
                 font-size: 24px;
                 transform: rotate(0.5turn);
             }
         }
-        
+        /* Le menu est invisible et est déplacé verticalement en bas de sa position initiale au début de la séquence.
+           Le menu apparait tout en revenant à sa position d'origine vers le haut à la fin de la séquence.
+        */
         @keyframes menuAnimation {
             0% {
                 opacity: 0;
